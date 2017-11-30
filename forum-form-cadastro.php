@@ -19,6 +19,7 @@
 		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 		<link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 		<!-- Bootstrap -->
 	    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,6 +34,76 @@
 	   			color: red;
 	   		}
 	   	</style>
+	   	<script type="text/javascript">
+
+            $(document).ready(function(){
+
+                $('.btn_carrega_conteudo').click(function(){
+                    
+                    var carrega_url = this.id;
+                    carrega_url = carrega_url + "_conteudo.php";
+                    
+                    
+                    $.ajax({
+
+                        url: carrega_url,
+
+                        success: function(data){
+                            $('#div_conteudo').html(data);
+                        },
+
+                        beforeSend: function(){
+                            $('#loader').css({display:"block"});
+                        },
+
+                        complete: function(){
+                            $('#loader').css({display:"none"});
+                        }
+
+                    });
+
+                });
+
+            });
+
+            var httpRequest;
+
+			function fazerRequisicao(url, destino){
+				document.getElementById(destino).innerHTML = "<center><img src='loader.gif'></center>";
+
+				if(window.XMLHttpRequest){
+					httpRequest = new XMLHttpRequest();
+				} else if(window.ActiveXObject){
+					try{
+						httpRequest = new ActiveXObject("Msxml2.XMLHTTP");	
+					} catch(e){
+						try{
+							httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+						} catch(e){
+							alert('Impossivel instanciar o objeto xmlhttprequest para esse navegador/versão');
+						}
+					}	
+				}
+
+				if(!httpRequest){
+				alert('Erro ao tentar criar instancia do objeto XMLHttpRequest');
+				return false;	
+				}
+
+				httpRequest.onreadystatechange = situacaoRequisicao;
+
+				httpRequest.open("GET", url);
+				httpRequest.send();
+			}						
+
+			function situacaoRequisicao(){
+				if(httpRequest.readyState == 4){
+					if(httpRequest.status == 200){
+						document.getElementById('div_conteudo').innerHTML = httpRequest.responseText;
+					}
+				}
+			}
+        </script>
 	</head>
 	<body id="teste">
 		<header class="menu menuH">
@@ -55,7 +126,13 @@
 				</li>
 			</ul>
 		</header>
-		<section>
+		<h2 style="text-align: center;">O que deseja fazer?</h2>
+		<a href="#" class="btn btn-primary btn_carrega_conteudo" id="pagina_1">Cadastrar uma conta</a>
+		<a href="#" class="btn btn-primary" onclick="fazerRequisicao('pagina_2_conteudo.php','div_conteudo')">Login</a>
+		<div class="col-md-10" id="div_conteudo">
+            <img id="loader" src='loader.gif' style="display: none">
+        </div>
+		<!--<section>
 			<div class="container">
       			<div class="row">
         			<div class="col-sm-8">
@@ -69,9 +146,9 @@
 			              		<label for="username">Username<a class="a">*</a></label>
 			              		<input type="text" name="username" class="form-control" id="username" placeholder="Digite o username que desejar">
 			              		<?php
-	                                if($erro_username){
+	                                /*if($erro_username){
 	                                    echo '<font color="#FF0000">Usuário já existe</font>';
-	                                }
+	                                }*/
 	                            ?>
 			            	</div>
 			            	<div class="form-group">
@@ -110,9 +187,9 @@
 		                            <input type="e-mail" class="form-control" name="email_name" placeholder="Digite seu email" required="requiored">
 		                        </div>
 		                        <?php
-		                            if($erro_email){
+		                            /*if($erro_email){
 		                                echo '<font color="#FF0000">E-mail já existe</font>';
-		                            }
+		                            }*/
 		                        ?>
 				            </div>
 				            
@@ -130,7 +207,7 @@
           				</form>
         			</div>
         			
-			        <div class="col-sm-4 <?= $erro == 1 ? 'open' : ''?>">
+			        <div class="col-sm-4 <?= $erro/* == 1 ? 'open' : ''*/?>">
 			          	<h3>Logar</h3>
 			          	<form method="post" action="valida-acesso.php" id="formLogin">
 			            	<div class="form-group">
@@ -143,9 +220,9 @@
 			              		<input type="password" name="senha_login" class="form-control" id="senha" placeholder="Digite sua senha">
 			            	</div>
 			            	<?php
-								if($erro == 1){
+								/*if($erro == 1){
 									echo '<font color="#FF0000">Usuário e/ou senha incorreto(s)</font>';
-								}
+								}*/
 							?>
 							<div class="form-group">
 			              		<div class="input-group">
@@ -156,8 +233,9 @@
 			        </div>
       			</div>
     		</div>
-		</section>
+		</section>-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	</body>
 </html>
