@@ -16,11 +16,9 @@
 	if($resultado_id){
 		$dados_username = mysqli_fetch_array($resultado_id);
 		if(isset($dados_username['username'])){
-			/*
-			$_SESSION['id_usuario'] = $dados_username['id'];
+		 	$_SESSION['id_usuario'] = $dados_username['id'];
 		 	$_SESSION['username'] = $dados_username['username'];
 		 	$_SESSION['email'] = $dados_username['email'];
-			*/	
 			header('Location: forum-coment.php');
 		} else{
 			header('Location: forum-form-cadastro.php?erro=1');
