@@ -64,7 +64,7 @@
 
 	//executar query
 	if(mysqli_query($link, $sql)){
-		header('Location: index.php');
+		header('Location: cadastro-sucesso.php');
 	} else{
 		echo 'Erro ao registrar usuário';
 	}

@@ -60,7 +60,7 @@
       			<div class="row">
         			<div class="col-sm-8">
           				<h3>Cadastre-se</h3>
-          				<form action="forum-cadastro.php" method="post">
+          				<form action="valida-cadastro.php" method="post">
 			            	<div class="form-group">
 			              		<label for="nome">Nome<a class="a">*</a></label>
 			              		<input type="text" name="nome" class="form-control" id="nome" placeholder="Digite seu nome completo">

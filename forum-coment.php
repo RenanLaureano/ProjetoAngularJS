@@ -23,44 +23,8 @@
 		<!-- Bootstrap -->
 	    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	    <link rel="stylesheet" type="text/css" href="css/estilo.css">
-	   	
-	   	<style type="text/css">
-	   		#teste{
-	   			margin-top: 100px;
-	   		}
+	   	<link rel="stylesheet" type="text/css" href="css/estilo-coment.css">
 
-	   		.linha{
-	   			background-color: gray;
-				width: auto;
-				height: 3px;
-				margin-top: 25px;
-				margin-bottom: 25px;
-	   		}
-
-	   		.USERNAME{
-	   			float: left;
-	   		}
-
-	   		.but{
-	   			float: right;
-	   			margin-top: -15px;
-	   		}
-
-	   		.dados-usuario{
-	   			float: left;
-	   		}
-
-	   		.comentario{
-	   			margin-right: 50%;
-	   			text-align: justify;
-	   			padding: 5px;
-	   		}
-
-	   		.borda{
-	   			border: 2px solid gray;
-	   			border-radius: 10px 10px;
-	   		}
-	   	</style>
 	</head>
 	<body id="teste">
 		<header class="menu menuH">
@@ -83,29 +47,15 @@
 					<a href="#">LEARN</a>						
 				</li>
 			</ul>
-			<nav id="navbar-notice" class="navbar">
-		      	<div class="navbar-inner">
-		        	<div class="container">
-			          	<p class="site-notice visible-phone">
-			            	<span class="USERNAME2">
-			            	USERNAME:
-			            	</span>
-			          	</p>
-				        <p class="site-notice visible-desktop USERNAME">
-				            USERNAME:
-				        </p>
-				        <form>
-				        	<button type="submit" class="btn btn-danger btn-xs but">Log-out</button>
-		        		</form>
-		        	</div>
-		      	</div>
-	    	</nav>
+			<div style="text-align: center;">
+				<h4>Usuario: <?= $_SESSION['username']?> <a href="valida-log-out.php"><button type="submit" class="btn btn-danger btn-sm">Log-out</button></a></h4>
+			</div>
 		</header>
 		<section>
 			<div class="container">
       			<div class="row">
         			<div class="col-sm-8">
-          				<h3>Criar discussão</h3>
+          				<h3>O que deseja perguntar <?= $_SESSION['username']?>?</h3>
           				<form>
           					<div class="form-group">
 			              		<label for="nome">Título da discussão</label>
@@ -118,6 +68,7 @@
 				            <button type="submit" class="btn btn-primary">Comentar</button>
           				</form>
         			</div>
+
 	    			<div class="col-sm-4">
 			          	<h3>Buscar discussões</h3>
 			          	<form>
@@ -127,11 +78,13 @@
 				            <button type="submit" class="btn btn-primary">Buscar</button>
 			          	</form>
 	        		</div>
+
 					<div class="col-sm-12">
 						<form>
 							<div class="linha"></div>
 						</form>
 					</div>
+
 					<div class="col-sm-12">
           				<h2>Discuções</h2>
           				<form>
