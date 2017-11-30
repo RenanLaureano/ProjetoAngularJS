@@ -1,0 +1,35 @@
+#teste{
+	   			margin-top: 100px;
+	   		}
+
+	   		.linha{
+	   			background-color: gray;
+				width: auto;
+				height: 3px;
+				margin-top: 25px;
+				margin-bottom: 25px;
+	   		}
+
+	   		.USERNAME{
+	   			float: left;
+	   		}
+
+	   		.but{
+	   			float: right;
+	   			margin-top: -15px;
+	   		}
+
+	   		.dados-usuario{
+	   			float: left;
+	   		}
+
+	   		.comentario{
+	   			margin-right: 50%;
+	   			text-align: justify;
+	   			padding: 5px;
+	   		}
+
+	   		.borda{
+	   			border: 2px solid gray;
+	   			border-radius: 10px 10px;
+	   		}
