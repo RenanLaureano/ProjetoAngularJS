@@ -1,9 +1,6 @@
 <?php
     session_start();
 
-    $erro_username = isset($_GET['erro_username']) ? $_GET['erro_username'] : 0;
-    $erro_email = isset($_GET['erro_email']) ? $_GET['erro_email'] : 0;
-
     $erro = isset($_GET['erro']) ? $_GET['erro']: 0;
 ?>
 <section>

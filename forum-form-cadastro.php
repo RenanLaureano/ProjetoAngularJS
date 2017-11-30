@@ -236,6 +236,39 @@
       			</div>
     		</div>
 		</section>-->
+		<?php
+			if($erro == 1){
+				echo 
+				'<section>
+					<div class="container">
+					    <div class="row">
+					        <div class="col-md-12">
+								<div class="col-md-12">
+								    <h3>Logar</h3>
+								    <form method="post" action="valida-acesso.php" id="formLogin">
+								        <div class="form-group">
+								            <div class="input-group">
+					                            <span class="input-group-addon">@</span>
+					                            <input type="e-mail" name="username_login" class="form-control" id="email" placeholder="Digite seu email ou username">
+					                        </div>
+								        </div>
+								        <div class="form-group">
+								            <input type="password" name="senha_login" class="form-control" id="senha" placeholder="Digite sua senha">
+								        </div>
+								        <font color="#FF0000">Usuário e/ou senha incorreto(s)</font>
+										<div class="form-group">
+								            <div class="input-group">
+								            	<button type="submit" class="btn btn-primary">Logar</button>
+										    </div>
+										</div>
+								    </form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>';
+			}
+		?>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
