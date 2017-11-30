@@ -7,7 +7,7 @@
 	<div class="container">
       	<div class="row">
         	<div class="col-md-12">
-				<div class="col-md-12 <?= $erro == 1 ? 'open' : ''?>">
+				<div class="col-md-12">
 			        <h3>Logar</h3>
 			        <form method="post" action="valida-acesso.php" id="formLogin">
 			            <div class="form-group">

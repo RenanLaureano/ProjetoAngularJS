@@ -67,11 +67,6 @@
 				        <label for="senha">Senha<a class="a">*</a></label>
 				        <input type="password" name="senha" class="form-control" id="senha" placeholder="Digite uma senha">
 				    </div>    
-	                <div class="form-group">
-	                    <label for="exampleInputFile">Insira uma foto de perfil</label>
-	                    <input type="file" id="exampleInputFile">
-	                    <p class="help-block">Arquivos .PNG, .JPEG, .JPG de no máximo 2Mb.</p>
-	                </div>
        				<p class="help-block">(<a class="a">*</a>) Itens obrigatórios</p>
 				    <button type="submit" class="btn btn-info"  name="cadastrar" value="Cadastrar">Cadastrar Usuário</button>
           		</form>
