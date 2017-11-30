@@ -56,14 +56,14 @@
       			<div class="row">
         			<div class="col-sm-8">
           				<h3>O que deseja perguntar <?= $_SESSION['username']?>?</h3>
-          				<form>
+          				<form method="post" action="valida-comentario.php">
           					<div class="form-group">
 			              		<label for="nome">Título da discussão</label>
-			              		<input type="text" class="form-control" id="nome" placeholder="Digite o título da postagem">
+			              		<input type="text" class="form-control" name="nome" id="nome" placeholder="Digite o título da postagem">
 			            	</div>
 			            	<div class="form-group">
 							  	<label for="comment">Pergunte</label>
-							  	<textarea class="form-control" rows="5" id="comment" placeholder="Digite alguma pergunta"></textarea>
+							  	<textarea class="form-control" rows="5" name="comment" id="comment" placeholder="Digite alguma pergunta"></textarea>
 							</div>
 				            <button type="submit" class="btn btn-primary">Comentar</button>
           				</form>
