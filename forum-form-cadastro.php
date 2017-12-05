@@ -116,7 +116,7 @@
 			</h1>
 			<ul class="menu">
 				<li class="dropdown classe-discuss menu">
-					<a href="forum.html">FORUM</a>
+					<a href="forum-form-cadastro.php">FORUM</a>
 				</li>
 				<li class="dropdown menu">
 					<a href="#">DISCUSS</a>
