@@ -35,35 +35,26 @@
 	   		}
 	   	</style>
 	   	<script type="text/javascript">
-
+	   		//XMLHttpRequest GET
             $(document).ready(function(){
-
                 $('.btn_carrega_conteudo').click(function(){
                     
                     var carrega_url = this.id;
-                    carrega_url = carrega_url + "_conteudo.php";
-                    
+                    carrega_url = carrega_url + "_conteudo.php";                    
                     
                     $.ajax({
-
                         url: carrega_url,
-
                         success: function(data){
                             $('#div_conteudo').html(data);
                         },
-
                         beforeSend: function(){
                             $('#loader').css({display:"block"});
                         },
-
                         complete: function(){
                             $('#loader').css({display:"none"});
                         }
-
                     });
-
                 });
-
             });
 
             var httpRequest;
@@ -103,6 +94,18 @@
 					}
 				}
 			}
+
+			//XMLHttpRequest POST
+			function loadDoc() {
+			  var xhttp = new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+			    if (this.readyState == 4 && this.status == 200) {
+			      document.getElementById("demo").innerHTML = this.responseText;
+			    }
+			  };
+			  xhttp.open("POST", "demo_post.php", true);
+			  xhttp.send();
+			}
         </script>
 	</head>
 	<body id="teste">
@@ -134,6 +137,9 @@
 		<div class="col-md-10" id="div_conteudo">
             <img id="loader" src='loader.gif' style="display: none">
         </div>
+        <button type="button" onclick="loadDoc()">Request data</button>
+
+        <p id="demo"></p>
 		<!--<section>
 			<div class="container">
       			<div class="row">
