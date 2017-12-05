@@ -133,11 +133,11 @@
 		<div style="text-align: center;">
 			<a href="#" class="btn btn-primary btn_carrega_conteudo" id="pagina_1">Cadastrar uma conta</a>
 			<a href="#" class="btn btn-primary" onclick="fazerRequisicao('pagina_2_conteudo.php','div_conteudo')">Login</a>
+			<a href="#" class="btn btn-primary" onclick="loadDoc()">Ajuda</a>
 		</div>
 		<div class="col-md-10" id="div_conteudo">
             <img id="loader" src='loader.gif' style="display: none">
         </div>
-        <button type="button" onclick="loadDoc()">Request data</button>
 
         <p id="demo"></p>
 		<!--<section>
