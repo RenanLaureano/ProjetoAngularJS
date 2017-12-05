@@ -35,10 +35,21 @@
 	   		}
 	   	</style>
 	   	<script type="text/javascript">
+	   		//XMLHttpRequest POST
+			function loadDoc() {
+			  var xhttp = new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+			    if (this.readyState == 4 && this.status == 200) {
+			      document.getElementById("demo").innerHTML = this.responseText;
+			    }
+			  };
+			  xhttp.open("POST", "demo_post.php", true);
+			  xhttp.send();
+			}
+
 	   		//XMLHttpRequest GET
             $(document).ready(function(){
                 $('.btn_carrega_conteudo').click(function(){
-                    
                     var carrega_url = this.id;
                     carrega_url = carrega_url + "_conteudo.php";                    
                     
@@ -95,17 +106,7 @@
 				}
 			}
 
-			//XMLHttpRequest POST
-			function loadDoc() {
-			  var xhttp = new XMLHttpRequest();
-			  xhttp.onreadystatechange = function() {
-			    if (this.readyState == 4 && this.status == 200) {
-			      document.getElementById("demo").innerHTML = this.responseText;
-			    }
-			  };
-			  xhttp.open("POST", "demo_post.php", true);
-			  xhttp.send();
-			}
+			
         </script>
 	</head>
 	<body id="teste">
