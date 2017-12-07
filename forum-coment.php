@@ -34,13 +34,13 @@
 	<body id="teste">
 		<header class="menu menuH">
 			<h1 class="ang-header">
-				<a href="index.html">
+				<a href="index.php">
 					<img width="117" height="30" src="https://angularjs.org/img/angularjs-for-header-only.svg">
 				</a>
 			</h1>
 			<ul id="menu-color" class="menu">
 				<li class="dropdown classe-discuss menu">
-					<a href="forum.html">FORUM</a>
+					<a href="forum-comment.php">FORUM</a>
 				</li>
 				<li class="dropdown menu">
 					<a href="#">DISCUSS</a>
