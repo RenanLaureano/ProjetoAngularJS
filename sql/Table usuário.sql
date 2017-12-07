@@ -10,18 +10,18 @@ CREATE TABLE USUARIO(
 
 
 CREATE TABLE _post(
-	id SERIAL PRIMARY KEY,
-	title VARCHAR NOT NULL,
-	text VARCHAR NOT NULL,
-	date_post date NOT NULL,
+	id_post int not null PRIMARY KEY AUTO_INCREMENT,
+	title VARCHAR(50),
+	texto VARCHAR(500),
+	date_post date,
 	username VARCHAR(20)
 );
 
 
 CREATE TABLE _coment(
-	id SERIAL PRIMARY KEY,
+	id_coment int not null PRIMARY KEY AUTO_INCREMENT,
 	username VARCHAR(20) NOT NULL,
 	coment VARCHAR(300) NOT NULL,
 	post_date DATE NOT NULL,
-	id_post SERIAL
+	id_post int
 );

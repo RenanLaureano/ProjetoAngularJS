@@ -7,9 +7,9 @@
 
 	require_once('db.class.php');
 
-	$titulo = $_POST['nome'];
-	$texto = $_POST['comment'];
+	$texto = $_POST['resposta-post'];
 	$nome = $_SESSION['username'];
+	$id = $_SESSION['id-post'];
 	
 
 	$objDB = new db();
@@ -17,12 +17,12 @@
 
 	$username = $_SESSION['username'];	
 
-	$sql = "INSERT INTO _post VALUES (default,'$titulo','$texto',CURRENT_DATE,'$nome')";
+	$sql = "INSERT INTO _coment VALUES (DEFAULT,'$nome','$texto',CURRENT_DATE,'$id')";
 
 	//executar query
 	if(mysqli_query($link, $sql)){
 		header('Location: forum-coment.php');
 	} else{
-		header('Location: forum-coment.php');
+		header('Location: index.php');
 	}
 ?>
