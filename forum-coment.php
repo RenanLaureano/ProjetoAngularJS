@@ -41,9 +41,9 @@
 			<ul id="menu-color" class="menu">
 				<li class="dropdown classe-discuss menu">
 <<<<<<< .mine
-					<a href="forum.php">FORUM</a>
+					<a href="forum-form-cadastro.php">FORUM</a>
 ||||||| .r16
-					<a href="forum.html">FORUM</a>
+					<a href="forum-form-cadastro.php">FORUM</a>
 =======
 					<a href="forum-comment.php">FORUM</a>
 >>>>>>> .r19

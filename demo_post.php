@@ -1,7 +1,9 @@
 <div style="text-align: center;">
-	<h1>Seu cadastro foi realizado com sucesso :)</h1>
+	<h1>Está com dúvidas?</h1>
 	<br>
-	<p class="sucesso">
-		<a href="forum-form-cadastro.php">Clique aqui</a> para ir para a página de login, ou <a href="index.php">aqui</a> para ir para a página inicial do AngularJS
+	<p>
+		Clicando em <strong>Cadastrar uma conta</strong>, você poderá cadastrar uma conta no AngularJS<br> 
+		Clicando em <strong>Login</strong>, caso você possua uma conta cadastrada, você poderá acessar o forum do AngularJS<br>
+		Clicando <strong>Imagens do AngularJS</strong>, você verá imagens do AngularJS. 	
 	</p>
 </div>

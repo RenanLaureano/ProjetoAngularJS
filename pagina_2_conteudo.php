@@ -6,8 +6,7 @@
 <section>
 	<div class="container">
       	<div class="row">
-        	<div class="col-md-12">
-				<div class="col-md-12">
+				<div class="col-md-4">
 			        <h3>Logar</h3>
 			        <form method="post" action="valida-acesso.php" id="formLogin">
 			            <div class="form-group">
@@ -30,8 +29,8 @@
 					        </div>
 					    </div>
 			        </form>
-			    </div>
 			</div>
 		</div>
 	</div>
 </section>
+<div class="col-md-8"></div>

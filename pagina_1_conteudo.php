@@ -4,10 +4,11 @@
     $erro_username = isset($_GET['erro_username']) ? $_GET['erro_username'] : 0;
     $erro_email = isset($_GET['erro_email']) ? $_GET['erro_email'] : 0;
 ?>
+<body>
 <section>
 	<div class="container">
     	<div class="row">
-    		<div class="col-md-12">
+    		<div class="col-md-4">
     			<h3>Cadastre-se</h3>
     			<form action="valida-cadastro.php" method="post">
 			        <div class="form-group">
@@ -74,3 +75,5 @@
         </div>
     </div>
 </section>
+<div class="col-md-8"></div>
+</body>
