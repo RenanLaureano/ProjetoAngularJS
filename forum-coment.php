@@ -40,7 +40,13 @@
 			</h1>
 			<ul id="menu-color" class="menu">
 				<li class="dropdown classe-discuss menu">
+<<<<<<< .mine
+					<a href="forum.php">FORUM</a>
+||||||| .r16
+					<a href="forum.html">FORUM</a>
+=======
 					<a href="forum-comment.php">FORUM</a>
+>>>>>>> .r19
 				</li>
 				<li class="dropdown menu">
 					<a href="#">DISCUSS</a>
