@@ -25,6 +25,11 @@
 	    <link rel="stylesheet" type="text/css" href="css/estilo.css">
 	   	<link rel="stylesheet" type="text/css" href="css/estilo-coment.css">
 
+	   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/preference.js"></script>
+        <script src="js/require.js"></script>
+
 	</head>
 	<body id="teste">
 		<header class="menu menuH">
@@ -33,7 +38,7 @@
 					<img width="117" height="30" src="https://angularjs.org/img/angularjs-for-header-only.svg">
 				</a>
 			</h1>
-			<ul class="menu">
+			<ul id="menu-color" class="menu">
 				<li class="dropdown classe-discuss menu">
 					<a href="forum.html">FORUM</a>
 				</li>
@@ -47,7 +52,21 @@
 					<a href="#">LEARN</a>						
 				</li>
 			</ul>
-			<div style="text-align: center;">
+
+			<div class="col-md-6 menu-cores">
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Dropdown button
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item bt-cor-cinza" href="#" onClick="colorheader('#263238')">Cinza</a>
+						<a class="dropdown-item bt-cor-rosa" href="#" onClick="colorheader('#d60045')">Rosa</a>
+						<a class="dropdown-item bt-cor-verde" href="#" onClick="colorheader('#3d733f')">Verde</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6" style="text-align: center;">
 				<h4>Usuario: <?= $_SESSION['username']?> <a href="valida-log-out.php"><button type="submit" class="btn btn-danger btn-sm">Log-out</button></a></h4>
 			</div>
 		</header>

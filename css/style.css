@@ -274,3 +274,28 @@ body {
 .button-twitter:active {
     color: white
 }
+
+.menu-cores{
+    margin-top: 5px;
+}
+.menu-cores .dropdown .dropdown-menu a:hover,
+.menu-cores .dropdown .dropdown-menu a:focus,
+.menu-cores .dropdown .dropdown-menu a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+
+
+.menu-cores .dropdown .dropdown-menu .bt-cor-cinza{
+    background: #263238;
+}
+
+.menu-cores .dropdown .dropdown-menu .bt-cor-rosa{
+    background: #d60045;
+}
+
+.menu-cores .dropdown .dropdown-menu .bt-cor-verde{
+    background: #3d733f;
+}
