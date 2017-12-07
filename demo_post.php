@@ -1,6 +1,3 @@
-<script type="text/javascript">
-	alert('lakdlkjasdlk');
-</script>
 <div style="text-align: center;">	
 	<h1>Está com dúvidas?</h1>
 	<br>
