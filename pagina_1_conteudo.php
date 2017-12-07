@@ -24,34 +24,6 @@
 	                        }
 	                    ?>
 			        </div>
-			        <div class="form-group">
-			            <label for="pais">País<a class="a">*</a></label>
-			            <input type="text" name="pais" class="form-control" id="pais" placeholder="Digite o nome do seu país, ex: Brasil">
-			        </div>			            	
-			        <div class="form-group">
-			            <label for="estado">Estado<a class="a">*</a></label>
-			            <input type="text" name="estado" class="form-control" id="estado" placeholder="Digite o seu estado, ex: Paraná">
-			        </div>
-			        <div class="form-group">
-			            <label for="cidade">Cidade<a class="a">*</a></label>
-			            <input type="text" name="cidade" class="form-control" id="cidade" placeholder="Digite o nome da sua cidade, ex: Cornélio Procópio">
-			        </div>
-			        <div class="form-group">
-			            <label for="bairro">Bairro<a class="a">*</a></label>
-			            <input type="text" name="bairro" class="form-control" id="bairro" placeholder="Digite o nome do seu bairro, ex: Centro">
-			        </div>
-			        <div class="form-group">
-			            <label for="rua">Rua<a class="a">*</a></label>
-			            <input type="text" name="rua" class="form-control" id="rua" placeholder="Digite o nome da sua rua/avenida/viela, ex: Av. Ayrton Senna">
-			        </div>
-			        <div class="form-group">
-			            <label for="numero">Número<a class="a">*</a></label>
-			            <input type="text" name="numero" class="form-control" id="numero" placeholder="Digite o número da sua residência, ex: 456">
-			        </div>
-			        <div class="form-group">
-			            <label for="complemento">Complemento</label>
-			            <input type="text" name="complemento" class="form-control" id="complemento" placeholder="Digite o complemento da sua residência, ex: casa dos fundos">
-			        </div>		
  					<div class="form-group">
 				        <label>Digite um e-mail válido<a class="a">*</a></label>
 		                <div class="input-group">
