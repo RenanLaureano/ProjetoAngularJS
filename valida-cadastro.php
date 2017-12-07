@@ -3,13 +3,6 @@
 
 	$nome = $_POST['nome'];
 	$username = $_POST['username'];
-	$pais = $_POST['pais'];
-	$estado = $_POST['estado'];
-	$cidade = $_POST['cidade'];
-	$bairro = $_POST['bairro'];
-	$rua = $_POST['rua'];
-	$numero = $_POST['numero'];
-	$complemento = $_POST['complemento'];
 	$email = $_POST['email_name'];
 	$senha = md5($_POST['senha']);
 
@@ -60,7 +53,7 @@
 		die();
 	}
 
-	$sql = "INSERT INTO usuario (nome, username, pais, estado, cidade, bairro, rua, numero, complemento, email, senha) VALUES ('$nome', '$username','$pais','$estado','$cidade','$bairro','$rua', '$numero', '$complemento', '$email', '$senha')";
+	$sql = "INSERT INTO usuario (nome, username, email, senha) VALUES ('$nome', '$username', '$email', '$senha')";
 
 	//executar query
 	if(mysqli_query($link, $sql)){
